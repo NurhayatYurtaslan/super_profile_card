@@ -8,7 +8,15 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Super Profile Card"),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 19, 53, 131),
+        title: const Text(
+          "Super Profile Card",
+          style: TextStyle(
+            color: Color.fromARGB(255, 204, 179, 189),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       body: const SuperProfileCard(),
     );
