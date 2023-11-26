@@ -18,9 +18,12 @@ class SuperProfileCard extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
             gradient: const LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomCenter,
               colors: [
-                Colors.purple,
-                Colors.red,
+                Color.fromARGB(255, 0, 4, 40),
+                Color.fromARGB(255, 19, 53, 131),
+                Color.fromARGB(255, 204, 179, 189),
               ],
             ),
           ),
@@ -45,7 +48,7 @@ class SuperProfileCard extends StatelessWidget {
                     left: 0,
                     child: Image.network(
                       'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/six.png?raw=true',
-                      width: width * 0.9,
+                      width: width * 0.8,
                       color: Colors.white70.withOpacity(0.3),
                     ),
                   ),
@@ -58,40 +61,44 @@ class SuperProfileCard extends StatelessWidget {
                       Center(
                         child: Image.network(
                           'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/seven.png?raw=true',
-                          color: Colors.deepPurple[700],
+                          color: const Color.fromARGB(255, 19, 53, 131),
                           width: width * 0.8,
                         ),
                       ),
                       //logo
                       Center(
                         child: Image.network(
-                          'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/seven.png?raw=true',
-                          color: Colors.deepPurple[700],
-                          width: width * 0.8,
+                          'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/logo.png?raw=true',
+                          color: const Color.fromARGB(255, 19, 53, 131),
+                          width: width * 0.3,
                         ),
                       ),
-                      Text(
-                        'Cylon Coder',
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.02,
+                      ),
+                      const Text(
+                        'Super Profile Card',
+                        textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Colors.deepPurple[700],
+                          color: Color.fromARGB(255, 19, 53, 131),
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.2,
+                        height: MediaQuery.of(context).size.height * 0.15,
                       ),
                       detailWidget(
-                        icon: Icons.phone,
-                        text: '+94765555777',
+                        icon: Icons.link,
+                        text: 'github.com/NurhayatYurtaslan',
                       ),
                       detailWidget(
                         icon: Icons.email,
-                        text: 'coderofceylon@gmail.com',
+                        text: 'nurhayatyurtaslan38@gmail.com',
                       ),
                       detailWidget(
                         icon: Icons.location_on,
-                        text: 'Galle, Sri Lanka',
+                        text: 'Balikesir/Turkey',
                       )
                     ],
                   )
