@@ -1,7 +1,4 @@
 library super_profile_card;
 
 /// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'package:super_profile_card/profile_card.dart';
