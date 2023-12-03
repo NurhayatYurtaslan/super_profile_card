@@ -11,6 +11,8 @@ class SuperProfileCard extends StatelessWidget {
   final String topImageUrl;
   final Color topImageColor;
   final double topImageWidth;
+  final String logoImageUrl;
+  final Color logoImageColor;
   const SuperProfileCard(
       {super.key,
       required this.gradientColors,
@@ -22,7 +24,10 @@ class SuperProfileCard extends StatelessWidget {
       this.topImageUrl =
           'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/seven.png?raw=true',
       this.topImageColor = Colors.transparent,
-      this.topImageWidth = 0.8});
+      this.topImageWidth = 0.8,
+      this.logoImageUrl =
+          'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/logo.png?raw=true',
+      this.logoImageColor = Colors.transparent});
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +55,7 @@ class SuperProfileCard extends StatelessWidget {
                 Positioned(
                   bottom: 0,
                   left: 0,
-                  //bottom Image 
+                  //bottom Image
                   child: Image.network(
                     bottomImageUrl,
                     width: width * bottomImageWidth,
@@ -73,8 +78,8 @@ class SuperProfileCard extends StatelessWidget {
                     //logo
                     Center(
                       child: Image.network(
-                        'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/logo.png?raw=true',
-                        color: const Color.fromARGB(255, 41, 204, 232),
+                        logoImageUrl,
+                        color: logoImageColor,
                         width: width * 0.3,
                       ),
                     ),
