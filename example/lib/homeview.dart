@@ -10,11 +10,11 @@ class HomeView extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 57, 57, 57),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 66, 163, 181),
+        backgroundColor: const Color.fromARGB(255, 41, 204, 232),
         title: const Text(
           "Super Profile Card",
           style: TextStyle(
-            color: Color.fromARGB(255, 0, 0, 0),
+            color: Color.fromARGB(255, 41, 204, 232),
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -22,22 +22,22 @@ class HomeView extends StatelessWidget {
       body: const SuperProfileCard(
         // colors for card body
         gradientColors: [
-          Color.fromARGB(255, 20, 35, 28),
           Color.fromARGB(255, 41, 204, 232),
-          Color.fromARGB(255, 13, 17, 16),
-          Color.fromARGB(255, 13, 17, 16),
+          Color.fromARGB(255, 41, 204, 232),
+          Color.fromARGB(255, 41, 204, 232),
+          Color.fromARGB(255, 0, 0, 0),
+          Color.fromARGB(255, 41, 204, 232),
         ],
         //icon
-
-        //bottomImage
-        bottomImageUrl:
-            'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/six.png?raw=true',
-        bottomImageColor: Colors.black,
-        bottomImageWidth: 0.85,
+//top
+        topCircleColor: Color.fromARGB(255, 1, 1, 1),
+        shadowColor: Colors.black,
+        shadowOffset: 38.0,
+        bulurSigmaValue: 10.0,
         //topImage
         topImageUrl:
             'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/seven.png?raw=true',
-        topImageColor: Color.fromARGB(255, 41, 204, 232),
+        topImageColor: Colors.transparent,
         topImageWidth: 0.8,
         //logo Image
         logoImageUrl:
@@ -50,6 +50,12 @@ class HomeView extends StatelessWidget {
           fontSize: 25,
           fontWeight: FontWeight.bold,
         ),
+        //bottomImage
+        bottomImageUrl:
+            'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/five.png?raw=true',
+        bottomImageColor: Colors.black,
+        bottomImageWidth: 0.25,
+
         //Icons
         iconsColor: Colors.black,
         firstIcon: Icons.link,

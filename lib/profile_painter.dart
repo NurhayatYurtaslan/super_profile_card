@@ -1,10 +1,26 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class CardCustomPainter extends CustomPainter {
+  final Color shadowColor; // Shadow color
+  final double shadowOffsetValue;
+  final Color topCircleColor;
+  final double bulurSigmaValue;
+  CardCustomPainter({
+    this.bulurSigmaValue = 8.0,
+    this.shadowColor = Colors.black,
+    this.shadowOffsetValue = 44.0,
+    this.topCircleColor = Colors.black,
+  });
+
   @override
   void paint(Canvas canvas, Size size) {
+    double shadowOffset = shadowOffsetValue; // Shadow offset value
+    double blurSigma = bulurSigmaValue; // Blur sigma value
+
     Paint paint = Paint()
-      ..color = const Color.fromARGB(255, 0, 0, 0)
+      ..color = topCircleColor
       ..style = PaintingStyle.fill;
 
     Path path = Path();
@@ -18,7 +34,17 @@ class CardCustomPainter extends CustomPainter {
     path.lineTo(0, 0);
     path.close();
 
+    canvas.drawShadow(path, shadowColor, shadowOffset, true);
+
     canvas.drawPath(path, paint);
+
+    final rect = Rect.fromLTWH(0, 0, size.width, size.height);
+    final shadowPaint = Paint()
+      ..blendMode = BlendMode.srcATop
+      ..imageFilter = ImageFilter.blur(sigmaX: blurSigma, sigmaY: blurSigma);
+    canvas.saveLayer(rect, shadowPaint);
+    canvas.drawPath(path, paint);
+    canvas.restore();
   }
 
   @override

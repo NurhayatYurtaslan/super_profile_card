@@ -23,6 +23,10 @@ class SuperProfileCard extends StatelessWidget {
   final String thirdIconText;
   final Color iconsTextColor;
   final Color dividerColor;
+  final Color shadowColor;
+  final double shadowOffset;
+  final Color topCircleColor;
+  final double bulurSigmaValue;
   const SuperProfileCard({
     super.key,
     required this.gradientColors,
@@ -50,7 +54,12 @@ class SuperProfileCard extends StatelessWidget {
     required this.firstIconText,
     required this.secondIconText,
     required this.thirdIconText,
-    required this.iconsTextColor, required this.dividerColor,
+    required this.iconsTextColor,
+    required this.dividerColor,
+    this.shadowColor = Colors.black,
+    this.shadowOffset = 44,
+    required this.topCircleColor,
+    required this.bulurSigmaValue,
   });
 
   @override
@@ -64,7 +73,7 @@ class SuperProfileCard extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           gradient: LinearGradient(
-            begin: Alignment.bottomRight,
+            begin: Alignment.bottomCenter,
             end: Alignment.topRight,
             colors: gradientColors,
           ),
@@ -73,7 +82,11 @@ class SuperProfileCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
           child: CustomPaint(
             size: Size(width, height),
-            painter: CardCustomPainter(),
+            painter: CardCustomPainter(
+                topCircleColor: topCircleColor,
+                shadowColor: shadowColor,
+                shadowOffsetValue: shadowOffset,
+                bulurSigmaValue: bulurSigmaValue),
             child: Stack(
               children: [
                 Positioned(
@@ -122,7 +135,7 @@ class SuperProfileCard extends StatelessWidget {
                       icon: firstIcon,
                       text: firstIconText,
                       iconColor: iconsColor,
-                      iconTextColor: iconsTextColor, 
+                      iconTextColor: iconsTextColor,
                       dividerColor: dividerColor,
                     ),
                     detailWidget(
