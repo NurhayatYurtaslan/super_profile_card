@@ -91,7 +91,7 @@ class SuperProfileCard extends StatelessWidget {
               children: [
                 Positioned(
                   bottom: 0,
-                  left: 0,
+                  
                   //bottom Image
                   child: Image.network(
                     bottomImageUrl,

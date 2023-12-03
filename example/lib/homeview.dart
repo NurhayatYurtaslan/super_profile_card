@@ -14,7 +14,7 @@ class HomeView extends StatelessWidget {
         title: const Text(
           "Super Profile Card",
           style: TextStyle(
-            color: Color.fromARGB(255, 41, 204, 232),
+            color: Colors.black,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -36,9 +36,9 @@ class HomeView extends StatelessWidget {
         bulurSigmaValue: 10.0,
         //topImage
         topImageUrl:
-            'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/seven.png?raw=true',
-        topImageColor: Colors.transparent,
-        topImageWidth: 0.8,
+            'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/eleven.png?raw=true',
+        topImageColor: Color.fromARGB(255, 41, 204, 232),
+        topImageWidth: 0.05,
         //logo Image
         logoImageUrl:
             'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/logo.png?raw=true',
@@ -52,9 +52,9 @@ class HomeView extends StatelessWidget {
         ),
         //bottomImage
         bottomImageUrl:
-            'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/five.png?raw=true',
+            'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/ten.png?raw=true',
         bottomImageColor: Colors.black,
-        bottomImageWidth: 0.25,
+        bottomImageWidth: 0.80,
 
         //Icons
         iconsColor: Colors.black,
