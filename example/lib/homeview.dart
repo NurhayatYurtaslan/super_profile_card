@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:super_profile_card/profile_card.dart';
+import 'package:super_profile_card_package/profile_card.dart';
+
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

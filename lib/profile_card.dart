@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:super_profile_card/Widgets/detail_widget.dart';
-import 'package:super_profile_card/profile_painter.dart';
+import 'package:super_profile_card_package/Widgets/detail_widget.dart';
+import 'package:super_profile_card_package/profile_painter.dart';
+
 
 class SuperProfileCard extends StatelessWidget {
   final List<Color> gradientColors;

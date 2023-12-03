@@ -11,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  super_profile_card:
+  super_profile_card_package:
     path: ../
 
   cupertino_icons: ^1.0.2
