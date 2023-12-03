@@ -34,6 +34,11 @@ class HomeView extends StatelessWidget {
             'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/six.png?raw=true',
         bottomImageColor: Colors.black,
         bottomImageWidth: 0.85,
+        //topImage
+        topImageUrl:
+            'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/seven.png?raw=true',
+        topImageColor: Color.fromARGB(255, 41, 204, 232),
+        topImageWidth: 0.8,
       ),
     );
   }

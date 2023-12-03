@@ -8,6 +8,9 @@ class SuperProfileCard extends StatelessWidget {
   final String bottomImageUrl;
   final Color bottomImageColor;
   final double bottomImageWidth;
+  final String topImageUrl;
+  final Color topImageColor;
+  final double topImageWidth;
   const SuperProfileCard(
       {super.key,
       required this.gradientColors,
@@ -15,7 +18,11 @@ class SuperProfileCard extends StatelessWidget {
       this.bottomImageUrl =
           'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/six.png?raw=true',
       this.bottomImageColor = Colors.transparent,
-      this.bottomImageWidth = 0.85});
+      this.bottomImageWidth = 0.85,
+      this.topImageUrl =
+          'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/seven.png?raw=true',
+      this.topImageColor = Colors.transparent,
+      this.topImageWidth = 0.8});
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +50,7 @@ class SuperProfileCard extends StatelessWidget {
                 Positioned(
                   bottom: 0,
                   left: 0,
+                  //bottom Image 
                   child: Image.network(
                     bottomImageUrl,
                     width: width * bottomImageWidth,
@@ -51,20 +59,22 @@ class SuperProfileCard extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    
-                    //Logo
+                    // const SizedBox(
+                    //   height: 30,
+                    // ),
+                    //topImage
                     Center(
                       child: Image.network(
-                        'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/seven.png?raw=true',
-                        color: const Color.fromARGB(255, 41, 204, 232),
-                        width: width * 0.8,
+                        topImageUrl,
+                        color: topImageColor,
+                        width: width * topImageWidth,
                       ),
                     ),
                     //logo
                     Center(
                       child: Image.network(
                         'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/logo.png?raw=true',
-                        color: Color.fromARGB(255, 41, 204, 232),
+                        color: const Color.fromARGB(255, 41, 204, 232),
                         width: width * 0.3,
                       ),
                     ),
