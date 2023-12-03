@@ -91,7 +91,7 @@ class SuperProfileCard extends StatelessWidget {
               children: [
                 Positioned(
                   bottom: 0,
-                  
+
                   //bottom Image
                   child: Image.network(
                     bottomImageUrl,
@@ -101,16 +101,21 @@ class SuperProfileCard extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    // const SizedBox(
-                    //   height: 30,
-                    // ),
+                    SizedBox(
+                      height: height * 0.01,
+                    ),
                     //topImage
-                    Center(
+                    Positioned(
+                      top: 2,
                       child: Image.network(
                         topImageUrl,
                         color: topImageColor,
                         width: width * topImageWidth,
+                        fit: BoxFit.fill,
                       ),
+                    ),
+                    SizedBox(
+                      height: height * 0.02,
                     ),
                     //logo
                     Center(
