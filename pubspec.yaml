@@ -1,8 +1,8 @@
 name: super_profile_card_package
 description: "This Flutter package, designed as an artistic masterpiece, enhances the elegance of profile pages by introducing a personalized and attention-grabbing profile card"
 version: 0.0.1
-homepage: https://github.com/NurhayatYurtaslan/super_profile_card
-documentation: https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/LICENSE
+homepage: https://github.com/NurhayatYurtaslan/super_profile_card_package
+documentation: https://github.com/NurhayatYurtaslan/super_profile_card_package/blob/main/LICENSE
 
 environment:
   sdk: '>=3.2.0 <4.0.0'
