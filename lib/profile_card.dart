@@ -3,7 +3,19 @@ import 'package:super_profile_card/Widgets/detail_widget.dart';
 import 'package:super_profile_card/profile_painter.dart';
 
 class SuperProfileCard extends StatelessWidget {
-  const SuperProfileCard({super.key});
+  final List<Color> gradientColors;
+  final Color iconsColor;
+  final String bottomImageUrl;
+  final Color bottomImageColor;
+  final double bottomImageWidth;
+  const SuperProfileCard(
+      {super.key,
+      required this.gradientColors,
+      required this.iconsColor,
+      this.bottomImageUrl =
+          'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/six.png?raw=true',
+      this.bottomImageColor = Colors.transparent,
+      this.bottomImageWidth = 0.85});
 
   @override
   Widget build(BuildContext context) {
@@ -15,15 +27,10 @@ class SuperProfileCard extends StatelessWidget {
         width: width * 0.8,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
-          gradient: const LinearGradient(
+          gradient: LinearGradient(
             begin: Alignment.bottomRight,
             end: Alignment.topRight,
-            colors: [
-              Color.fromARGB(255, 20, 35, 28),
-              Color.fromARGB(255, 46, 126, 57),
-              Color.fromARGB(255, 13, 17, 16),
-              Color.fromARGB(255, 13, 17, 16)
-            ],
+            colors: gradientColors,
           ),
         ),
         child: ClipRRect(
@@ -33,34 +40,23 @@ class SuperProfileCard extends StatelessWidget {
             painter: CardCustomPainter(),
             child: Stack(
               children: [
-                // Positioned(
-                //   bottom: 10,
-                //   left: -15,
-                //   child: Image.network(
-                //     'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/two.png?raw=true',
-                //     color: Colors.black.withOpacity(0.3),
-                //     width: width * 0.9,
-                //   ),
-                // ),
                 Positioned(
                   bottom: 0,
                   left: 0,
                   child: Image.network(
-                    'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/six.png?raw=true',
-                    width: width * 0.85,
-                    color: const Color.fromARGB(179, 0, 0, 0).withOpacity(1.0),
+                    bottomImageUrl,
+                    width: width * bottomImageWidth,
+                    color: bottomImageColor,
                   ),
                 ),
                 Column(
                   children: [
-                    // const SizedBox(
-                    //   height: 30,
-                    // ),
+                    
                     //Logo
                     Center(
                       child: Image.network(
                         'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/seven.png?raw=true',
-                        color: const Color.fromARGB(255, 46, 126, 57),
+                        color: const Color.fromARGB(255, 41, 204, 232),
                         width: width * 0.8,
                       ),
                     ),
@@ -68,7 +64,7 @@ class SuperProfileCard extends StatelessWidget {
                     Center(
                       child: Image.network(
                         'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/logo.png?raw=true',
-                        color: Color.fromARGB(255, 46, 126, 57),
+                        color: Color.fromARGB(255, 41, 204, 232),
                         width: width * 0.3,
                       ),
                     ),
@@ -79,7 +75,7 @@ class SuperProfileCard extends StatelessWidget {
                       'Super Profile Card',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Color.fromARGB(255, 46, 126, 57),
+                        color: Color.fromARGB(255, 41, 204, 232),
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
                       ),
@@ -90,14 +86,17 @@ class SuperProfileCard extends StatelessWidget {
                     detailWidget(
                       icon: Icons.link,
                       text: 'github.com/NurhayatYurtaslan',
+                      iconColor: iconsColor,
                     ),
                     detailWidget(
                       icon: Icons.email,
                       text: 'nurhayatyurtaslan38@gmail.com',
+                      iconColor: iconsColor,
                     ),
                     detailWidget(
                       icon: Icons.location_on,
                       text: 'Balikesir/Turkey',
+                      iconColor: iconsColor,
                     )
                   ],
                 )

@@ -10,7 +10,7 @@ class HomeView extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 57, 57, 57),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 46, 126, 57),
+        backgroundColor: Color.fromARGB(255, 66, 163, 181),
         title: const Text(
           "Super Profile Card",
           style: TextStyle(
@@ -19,7 +19,22 @@ class HomeView extends StatelessWidget {
           ),
         ),
       ),
-      body: const SuperProfileCard(),
+      body: const SuperProfileCard(
+        // colors for card body
+        gradientColors: [
+          Color.fromARGB(255, 20, 35, 28),
+          Color.fromARGB(255, 41, 204, 232),
+          Color.fromARGB(255, 13, 17, 16),
+          Color.fromARGB(255, 13, 17, 16),
+        ],
+        //icon
+        iconsColor: Colors.black,
+        //bottomImage
+        bottomImageUrl:
+            'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/six.png?raw=true',
+        bottomImageColor: Colors.black,
+        bottomImageWidth: 0.85,
+      ),
     );
   }
 }

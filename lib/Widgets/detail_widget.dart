@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget detailWidget({required IconData icon, required String text}) {
+Widget detailWidget({required IconData icon, required String text, required Color iconColor}) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 10),
     child: Column(
@@ -10,7 +10,7 @@ Widget detailWidget({required IconData icon, required String text}) {
             Icon(
               icon,
               size: 30,
-              color: Colors.white70,
+              color: iconColor
             ),
             const SizedBox(
               width: 20,
