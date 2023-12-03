@@ -10,7 +10,7 @@
 </br>
  
 <p>
-✨ Introducing a custom-designed Flutter package, this artistic masterpiece is set to redefine the elegance and aesthetics of your profile pages. Meticulously crafted to infuse a personal touch into your profile cards, this custom painting package is engineered to create an unforgettable user experience, effortlessly capturing their attention. 🌈
+Introducing a custom-designed Flutter package, this artistic masterpiece is set to redefine the elegance and aesthetics of your profile pages. Meticulously crafted to infuse a personal touch into your profile cards, this custom painting package is engineered to create an unforgettable user experience, effortlessly capturing their attention. 🌈
 
 The journey begins with a strikingly elegant circle strategically positioned at the pinnacle of your profile card. Expertly designed shadows surrounding this circle not only introduce depth to your profile but also infuse a sense of modernity and contemporaneity. The versatility provided by parameters such as shadow color, offset value, and blur intensity in the overall card design allows for a complete and nuanced personalization of your profile's atmosphere. 🎨💖
 
@@ -18,7 +18,11 @@ Consider this package as the quintessential element for your profile pages; it d
 
 In a world where first impressions matter, this package ensures that your profile becomes a captivating and memorable focal point, inviting users to explore and appreciate the artistry embedded within. 🌟👁️✨
 </p>
+<div> 
+<img width="300" height="600" src="https://github.com/NurhayatYurtaslan/super_profile_card_package/blob/main/assets/image/ss/one.png?raw=true">
+<img width="300" height="600" src="https://github.com/NurhayatYurtaslan/super_profile_card_package/blob/main/assets/image/ss/two.png?raw=true">
 
+</div>
 
 ## Property and Value
 
