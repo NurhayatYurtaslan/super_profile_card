@@ -3,7 +3,6 @@ import 'package:super_profile_card/profile_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +28,7 @@ class HomeView extends StatelessWidget {
           Color.fromARGB(255, 41, 204, 232),
         ],
         //icon
-//top
+        //top
         topCircleColor: Color.fromARGB(255, 1, 1, 1),
         shadowColor: Colors.black,
         shadowOffset: 38.0,
@@ -55,7 +54,6 @@ class HomeView extends StatelessWidget {
             'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/ten.png?raw=true',
         bottomImageColor: Colors.black,
         bottomImageWidth: 0.80,
-
         //Icons
         iconsColor: Colors.black,
         firstIcon: Icons.link,
