@@ -31,6 +31,7 @@ Widget detailWidget(
         ),
         Divider(
           color: dividerColor,
+          
         ),
       ],
     ),
