@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 
-Widget detailWidget({required IconData icon, required String text, required Color iconColor}) {
+Widget detailWidget(
+    {required IconData icon,
+    required String text,
+    required Color iconTextColor,
+    required Color iconColor,
+    required Color dividerColor}) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 10),
     child: Column(
       children: [
         Row(
           children: [
-            Icon(
-              icon,
-              size: 30,
-              color: iconColor
-            ),
+            Icon(icon, size: 30, color: iconColor),
             const SizedBox(
               width: 20,
             ),
@@ -19,16 +20,18 @@ Widget detailWidget({required IconData icon, required String text, required Colo
               child: Text(
                 text,
                 overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white70,
+                  color: iconTextColor,
                 ),
               ),
             ),
           ],
         ),
-        const Divider(),
+        Divider(
+          color: dividerColor,
+        ),
       ],
     ),
   );

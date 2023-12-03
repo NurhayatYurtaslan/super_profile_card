@@ -28,7 +28,7 @@ class HomeView extends StatelessWidget {
           Color.fromARGB(255, 13, 17, 16),
         ],
         //icon
-        iconsColor: Colors.black,
+
         //bottomImage
         bottomImageUrl:
             'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/six.png?raw=true',
@@ -50,6 +50,16 @@ class HomeView extends StatelessWidget {
           fontSize: 25,
           fontWeight: FontWeight.bold,
         ),
+        //Icons
+        iconsColor: Colors.black,
+        firstIcon: Icons.link,
+        secondIcon: Icons.email,
+        thirdIcon: Icons.location_on,
+        iconsTextColor: Colors.black,
+        firstIconText: "First Icon's Text",
+        secondIconText: "Secon Icon's Text",
+        thirdIconText: "Third Icon's Text",
+        dividerColor: Colors.black,
       ),
     );
   }

@@ -15,6 +15,14 @@ class SuperProfileCard extends StatelessWidget {
   final Color logoImageColor;
   final String topText;
   final TextStyle topTextStyle;
+  final IconData firstIcon;
+  final IconData secondIcon;
+  final IconData thirdIcon;
+  final String firstIconText;
+  final String secondIconText;
+  final String thirdIconText;
+  final Color iconsTextColor;
+  final Color dividerColor;
   const SuperProfileCard({
     super.key,
     required this.gradientColors,
@@ -36,6 +44,13 @@ class SuperProfileCard extends StatelessWidget {
       fontSize: 25,
       fontWeight: FontWeight.bold,
     ),
+    required this.firstIcon,
+    required this.secondIcon,
+    required this.thirdIcon,
+    required this.firstIconText,
+    required this.secondIconText,
+    required this.thirdIconText,
+    required this.iconsTextColor, required this.dividerColor,
   });
 
   @override
@@ -104,19 +119,25 @@ class SuperProfileCard extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.15,
                     ),
                     detailWidget(
-                      icon: Icons.link,
-                      text: 'github.com/NurhayatYurtaslan',
+                      icon: firstIcon,
+                      text: firstIconText,
                       iconColor: iconsColor,
+                      iconTextColor: iconsTextColor, 
+                      dividerColor: dividerColor,
                     ),
                     detailWidget(
-                      icon: Icons.email,
-                      text: 'nurhayatyurtaslan38@gmail.com',
+                      icon: secondIcon,
+                      text: secondIconText,
                       iconColor: iconsColor,
+                      iconTextColor: iconsTextColor,
+                      dividerColor: dividerColor,
                     ),
                     detailWidget(
-                      icon: Icons.location_on,
-                      text: 'Balikesir/Turkey',
+                      icon: thirdIcon,
+                      text: thirdIconText,
                       iconColor: iconsColor,
+                      iconTextColor: iconsTextColor,
+                      dividerColor: dividerColor,
                     )
                   ],
                 )
