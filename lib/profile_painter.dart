@@ -4,7 +4,7 @@ class CardCustomPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint()
-      ..color = Color.fromARGB(255, 206, 207, 222)
+      ..color = const Color.fromARGB(255, 0, 0, 0)
       ..style = PaintingStyle.fill;
 
     Path path = Path();
