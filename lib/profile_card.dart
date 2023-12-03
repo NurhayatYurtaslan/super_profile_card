@@ -13,21 +13,30 @@ class SuperProfileCard extends StatelessWidget {
   final double topImageWidth;
   final String logoImageUrl;
   final Color logoImageColor;
-  const SuperProfileCard(
-      {super.key,
-      required this.gradientColors,
-      required this.iconsColor,
-      this.bottomImageUrl =
-          'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/six.png?raw=true',
-      this.bottomImageColor = Colors.transparent,
-      this.bottomImageWidth = 0.85,
-      this.topImageUrl =
-          'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/seven.png?raw=true',
-      this.topImageColor = Colors.transparent,
-      this.topImageWidth = 0.8,
-      this.logoImageUrl =
-          'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/logo.png?raw=true',
-      this.logoImageColor = Colors.transparent});
+  final String topText;
+  final TextStyle topTextStyle;
+  const SuperProfileCard({
+    super.key,
+    required this.gradientColors,
+    required this.iconsColor,
+    this.bottomImageUrl =
+        'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/six.png?raw=true',
+    this.bottomImageColor = Colors.transparent,
+    this.bottomImageWidth = 0.85,
+    this.topImageUrl =
+        'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/seven.png?raw=true',
+    this.topImageColor = Colors.transparent,
+    this.topImageWidth = 0.8,
+    this.logoImageUrl =
+        'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/logo.png?raw=true',
+    this.logoImageColor = Colors.transparent,
+    this.topText = ' ',
+    this.topTextStyle = const TextStyle(
+      color: Color.fromARGB(255, 41, 204, 232),
+      fontSize: 25,
+      fontWeight: FontWeight.bold,
+    ),
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -86,14 +95,10 @@ class SuperProfileCard extends StatelessWidget {
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.02,
                     ),
-                    const Text(
-                      'Super Profile Card',
+                    Text(
+                      topText,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 41, 204, 232),
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: topTextStyle,
                     ),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.15,

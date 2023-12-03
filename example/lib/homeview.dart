@@ -43,6 +43,13 @@ class HomeView extends StatelessWidget {
         logoImageUrl:
             'https://github.com/NurhayatYurtaslan/super_profile_card/blob/main/assets/image/png/logo.png?raw=true',
         logoImageColor: Color.fromARGB(255, 41, 204, 232),
+        //Top Text
+        topText: 'Super Profile Card',
+        topTextStyle: TextStyle(
+          color: Color.fromARGB(255, 41, 204, 232),
+          fontSize: 25,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }
