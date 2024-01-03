@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:super_profile_card_package/Widgets/detail_widget.dart';
 import 'package:super_profile_card_package/profile_painter.dart';
 
-
 class SuperProfileCard extends StatelessWidget {
   final List<Color> gradientColors;
   final Color iconsColor;
@@ -28,8 +27,9 @@ class SuperProfileCard extends StatelessWidget {
   final double shadowOffset;
   final Color topCircleColor;
   final double bulurSigmaValue;
+
   const SuperProfileCard({
-    super.key,
+    Key? key,
     required this.gradientColors,
     required this.iconsColor,
     this.bottomImageUrl =
@@ -61,7 +61,7 @@ class SuperProfileCard extends StatelessWidget {
     this.shadowOffset = 44,
     required this.topCircleColor,
     required this.bulurSigmaValue,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -84,41 +84,35 @@ class SuperProfileCard extends StatelessWidget {
           child: CustomPaint(
             size: Size(width, height),
             painter: CardCustomPainter(
-                topCircleColor: topCircleColor,
-                shadowColor: shadowColor,
-                shadowOffsetValue: shadowOffset,
-                bulurSigmaValue: bulurSigmaValue),
+              topCircleColor: topCircleColor,
+              shadowColor: shadowColor,
+              shadowOffsetValue: shadowOffset,
+              bulurSigmaValue: bulurSigmaValue,
+            ),
             child: Stack(
               children: [
                 Positioned(
                   bottom: 0,
-
-                  //bottom Image
                   child: Image.network(
                     bottomImageUrl,
                     width: width * bottomImageWidth,
                     color: bottomImageColor,
                   ),
                 ),
+                Image.network(
+                  topImageUrl,
+                  color: topImageColor,
+                  width: width * topImageWidth,
+                  fit: BoxFit.fill,
+                ),
+                const SizedBox(
+                  height: 70,
+                ),
                 Column(
                   children: [
                     SizedBox(
-                      height: height * 0.01,
+                      height: height * 0.07,
                     ),
-                    //topImage
-                    Positioned(
-                      top: 2,
-                      child: Image.network(
-                        topImageUrl,
-                        color: topImageColor,
-                        width: width * topImageWidth,
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                    SizedBox(
-                      height: height * 0.02,
-                    ),
-                    //logo
                     Center(
                       child: Image.network(
                         logoImageUrl,
@@ -157,9 +151,9 @@ class SuperProfileCard extends StatelessWidget {
                       iconColor: iconsColor,
                       iconTextColor: iconsTextColor,
                       dividerColor: dividerColor,
-                    )
+                    ),
                   ],
-                )
+                ),
               ],
             ),
           ),
