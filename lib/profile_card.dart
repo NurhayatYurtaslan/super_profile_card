@@ -29,7 +29,7 @@ class SuperProfileCard extends StatelessWidget {
   final double bulurSigmaValue;
 
   const SuperProfileCard({
-    Key? key,
+    super.key,
     required this.gradientColors,
     required this.iconsColor,
     this.bottomImageUrl =
@@ -61,7 +61,7 @@ class SuperProfileCard extends StatelessWidget {
     this.shadowOffset = 44,
     required this.topCircleColor,
     required this.bulurSigmaValue,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
