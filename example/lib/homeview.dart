@@ -9,7 +9,7 @@ class HomeView extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 57, 57, 57),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 97, 0, 123),
+        backgroundColor: const Color.fromARGB(255, 97, 0, 123),
         title: const Text(
           "Super Profile Card",
           style: TextStyle(
